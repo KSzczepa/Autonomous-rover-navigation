@@ -8,10 +8,13 @@
 A greedy algorithm was used to program the robot, which, in order to determine the solution at each step, makes the most promising partial solution choice at that time. It used the sources collected, compared with the target behaviour and analysed taking into account the cost function.</p>
 <h2>Ilustrating the results (WP3)</h2>
 <p>The Greedy algorithm is not a predictive algorithm, but in the case of a small grid it proved sufficient for the agent to reach the target, regardless of the location of the obstacle. To illustrate results performed a numerical and graphical simulation, library "Pygame" was used to represent the graphical results.</p>
-<img src=''/>
-<img src=''/>
+<div align="center">
+<img src='https://user-images.githubusercontent.com/87570436/201747487-336de662-3ebf-4cd7-958d-d0cddf047972.png' height='200px'/>
+<img src='https://user-images.githubusercontent.com/87570436/201747570-65e5a96c-253f-45ba-a81c-baf645fdda6b.png' height='200px'/>
+</div>
 <h2>Implementation of the routines to scale-up the problem to larger grids (WP4)</h2>
 <p>Extended verison of the project allows the user to generate an arbitrarily large grid and random obstacle’s positions or declare obstacles on specific fields. A size of grid is defined by user. In this version of the algorithm, the return_target(x) function has been modified to be universal, regardless of the grid size, but considers the grid as square. It uses the new target_direction() function, which contains all the calculations. Also modified the return_reward() function to be independent of the number of obstacles.</p>
+<div align="center"><img src='https://user-images.githubusercontent.com/87570436/201749311-acd21dd3-beba-444c-95a6-53f4e1703ce4.png' height='350px'/></div>
 <h2>implementation of a receding horizon version of the algorithm (WP5)</h2>
 <p>In this part of the project the receding horizon version of the algorithm is implemented, which is a predictive algorithm. A property of predictive control is its repetitive mode of operation. It is possible to determine a sequence of future controls, but only the first step of this sequence is used, so that in the next step the whole calculation is repeated. In the main loop, we calculate the weights for control through a receding horizon and choose a policy. The idea is that we restric the state space to the relative states available to us and use crowdsourcing on this new state space.</p>
 <h2>Tools</h2>
